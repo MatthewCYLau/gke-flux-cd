@@ -10,3 +10,5 @@ spec:
     name: flux-system
   path: ./clusters/gke-production/apps
   prune: true
+  wait: true # <--- Forces Flux to wait for resources to become healthy
+  timeout: 2m # <--- Fails if pods don't stabilize within 2 minutes
